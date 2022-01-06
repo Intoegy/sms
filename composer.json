@@ -1,0 +1,8 @@
+{
+    "name": "intoegy/sms",
+    "description": "Send SMS from your application",
+    "require": {
+        "php": ">=5.4",
+        "laravel/framework": ">=5.4"
+    }
+}
