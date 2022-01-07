@@ -2,9 +2,9 @@
 
 namespace Intoegy\SMS;
 
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
-class SMSServiceProvider extends ServiceProvider
+class SMSServiceProvider extends BaseServiceProvider
 {
     /**
     * Register services.
@@ -13,13 +13,6 @@ class SMSServiceProvider extends ServiceProvider
     */
     public function register() {
         //
-        if ($this->app->runningInConsole()) {
-
-            $this->publishes([
-                __DIR__.'/config/config.php' => config_path('sms.php'),
-            ], 'config');
-
-        }
         $this->mergeConfigFrom(__DIR__.'/config/config.php','sms');
     }
 
@@ -30,7 +23,12 @@ class SMSServiceProvider extends ServiceProvider
     */
     public function boot() {
         //
-       
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/config/config.php' => config_path('sms.php'),
+            ], 'sms-config');
+            
+        }
     }
 
     public static function send($to, $message) {
