@@ -47,7 +47,7 @@ You have to add the package provider to your app providers list:
     SMS::send('201010000000','test message');
 ```
 
-To you can send sms from any place in you project, add the `SMS` alies in application aliess at `config/app.php`:
+To you can send sms from any place in you project, add the `SMS` aliase in application's aliases at `config/app.php`:
 
 ```php
 'aliases' => [
@@ -60,7 +60,7 @@ To you can send sms from any place in you project, add the `SMS` alies in applic
 
 ## License
 
-Released under the MIT License, see [LICENSE](LICENSE).
+Released under the MIT License, see [LICENSE](LICENSE.md).
 
 [ico-version]: https://img.shields.io/packagist/v/intoegy/sms.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
