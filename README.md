@@ -35,16 +35,7 @@ The defaults are set in `config/sms.php`. Publish the config to copy the file to
 php artisan vendor:publish --tag="sms-config"
 ```
 
-You have to add the package provider to your app providers list:
-```php
-'providers' => [
-   // ...
-   Intoegy\SMS\SMSServcieProvider::class,
-   // ...
-]
-```
-
-And create the configuration file called `/config/sms.php` contains this content:
+If you get error in previuse step you have to create the configuration file called `/config/sms.php` contains this content:
 ```php
 <?php
 
@@ -57,13 +48,23 @@ return [
     ];
 
 ```
-For more security you can add this information in `.env` file:
+And for more security you can add this information in `.env` file:
 ```sh
 #...
 SMS_USER    = 
 SMS_PASS    =
 SMS_SENDER  =
 #...
+```
+
+
+You have to add the package provider to your app providers list:
+```php
+'providers' => [
+   // ...
+   Intoegy\SMS\SMSServcieProvider::class,
+   // ...
+]
 ```
 
 ## Global usage
