@@ -2,11 +2,21 @@
     "name": "intoegy/sms",
     "description": "Send SMS from your application",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Masters",
+            "homepage": "https://themastergate.com"
+        },
+        {
+            "name": "Mahmoud Gomaa",
+            "email": "mahmodg77@gmail.com"
+        }
+    ],
     "require": {
         "php": ">=5.4",
         "laravel/framework": ">=5.4"
     },
-    "atoload":{
+    "autoload":{
         "psr-4":{
             "Intoegy\\SMS": "src/"
         }
