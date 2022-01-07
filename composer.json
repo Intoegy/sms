@@ -9,5 +9,15 @@
         "psr-4":{
             "Intoegy\\SMS": "src/"
         }
-    }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "dev-main"
+        },
+        "laravel": {
+            "providers": [
+              "Intoegy\\SMS\\SMSServiceProvider"
+            ]
+        }
+    },
 }
