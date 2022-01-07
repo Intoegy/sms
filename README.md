@@ -5,12 +5,12 @@ send sms from your application
 [![Software License][ico-license]](LICENSE.md)
 [![Total Downloads][ico-downloads]][link-downloads]
 
-Implements https://github.com/asm89/stack-cors for Laravel
+Implements https://github.com/intoegy/sms for Laravel
 
 ## About
 
 The `intoegy/sms` package allows you to send [SMS](https://themastergate.com/app/session/register?source=gomaa)
-headers with Laravel middleware configuration.
+from your laravel application.
 
 
 ## Installation
@@ -43,6 +43,9 @@ You have to add the package provider to your app providers list:
 ```
 
 ## Global usage
+```php
+    SMS::send('201010000000','test message');
+```
 
 To you can send sms from any place in you project, add the `SMS` alies in application aliess at `config/app.php`:
 
