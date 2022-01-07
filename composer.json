@@ -11,13 +11,6 @@
             "Intoegy\\SMS": "src/"
         }
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-              "Intoegy\\SMS\\SMSServiceProvider"
-            ]
-        }
-    },
     "minimum-stability": "dev",
     "prefer-stable": true
     
