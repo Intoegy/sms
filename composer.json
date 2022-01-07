@@ -2,36 +2,34 @@
     "name": "intoegy/sms",
     "description": "Send SMS from your application",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Masters",
-            "homepage": "https://themastergate.com"
-        },
+    "authors": [{
+        "name": "Masters",
+        "homepage": "https://themastergate.com"
+    },
         {
             "name": "Mahmoud Gomaa",
             "email": "mahmoudg77@gmail.com"
-        }
-    ],
+        }],
     "require": {
         "php": ">=5.4",
         "laravel/framework": ">=5.4"
     },
-    "autoload":{
-        "psr-4":{
+    "autoload": {
+        "psr-4": {
             "\\Intoegy\\SMS\\": "intoegy/sms/src/"
         }
     },
-    "extra":{
-    "laravel": {
-        "providers": [
-            "Intoegy\\SMS\\SMSServiceProvider"
-        ],
-        "aliases": {
-           "Intoegy\\SMS\\SMSServiceProvider"
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Intoegy\\SMS\\SMSServiceProvider"
+            ],
+            "aliases": [
+                "Intoegy\\SMS\\SMSServiceProvider"
+            ]
         }
-    }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
-    
+
 }
