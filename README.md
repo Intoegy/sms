@@ -1,5 +1,5 @@
 # sms
-send sms from your application
+Send GSM Short Message (SMS) from your laravel application
 
 [![Build Status][ico-actions]][link-actions]
 [![Software License][ico-license]](LICENSE.md)
@@ -28,7 +28,7 @@ composer require intoegy/sms
 ```
 ## Configuration
 
-In the first you have to create account at [SMS Smart Egypt](https://smseg.com/app/session/register?source=php-package).
+In the first you have to create account at [SMS Egypt](https://smseg.com/app/session/register?source=php-package).
 
 The defaults are set in `config/sms.php`. Publish the config to copy the file to your own config:
 ```sh

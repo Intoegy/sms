@@ -1,10 +1,11 @@
 {
     "name": "intoegy/sms",
-    "description": "Send SMS from your application",
+    "description": "Send GSM Short Message (SMS) from your laravel application",
+    "keywords":["laravel sms","send sms","smseg","GSM","SMS","EGYPT"],
     "license": "MIT",
     "authors": [{
-        "name": "Masters",
-        "homepage": "https://themastergate.com"
+        "name": "SMS EGYPT",
+        "homepage": "https://smseg.com"
     },
         {
             "name": "Mahmoud Gomaa",
