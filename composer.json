@@ -21,6 +21,16 @@
             "\\Intoegy\\SMS\\": "intoegy/sms/src/"
         }
     },
+    "extra":{
+    "laravel": {
+        "providers": [
+            "Intoegy\\SMS\\SMSServiceProvider"
+        ],
+        "aliases": {
+           "Intoegy\\SMS\\SMSServiceProvider"
+        }
+    }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
     
