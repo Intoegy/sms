@@ -22,10 +22,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Intoegy\\SMS\\SMSServiceProvider"
+                "\\Intoegy\\SMS\\SMSServiceProvider"
             ],
             "aliases": [
-                "Intoegy\\SMS\\SMSServiceProvider"
+                "\\Intoegy\\SMS\\SMSServiceProvider"
             ]
         }
     },
