@@ -6,20 +6,6 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitd15286a592f8e661b2315752a8208ed3
 {
-    public static $prefixLengthsPsr4 = array (
-        'I' => 
-        array (
-            'Intoegy\\Sms\\' => 12,
-        ),
-    );
-
-    public static $prefixDirsPsr4 = array (
-        'Intoegy\\Sms\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
-        ),
-    );
-
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
@@ -27,8 +13,6 @@ class ComposerStaticInitd15286a592f8e661b2315752a8208ed3
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitd15286a592f8e661b2315752a8208ed3::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitd15286a592f8e661b2315752a8208ed3::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInitd15286a592f8e661b2315752a8208ed3::$classMap;
 
         }, null, ClassLoader::class);
