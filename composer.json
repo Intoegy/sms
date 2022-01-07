@@ -11,9 +11,6 @@
         }
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "dev-main"
-        },
         "laravel": {
             "providers": [
               "Intoegy\\SMS\\SMSServiceProvider"
