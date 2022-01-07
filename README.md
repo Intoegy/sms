@@ -9,7 +9,7 @@ Implements https://github.com/intoegy/sms for Laravel
 
 ## About
 
-The `intoegy/sms` package allows you to send [SMS](https://themastergate.com/app/session/register?source=gomaa)
+The `intoegy/sms` package allows you to send [SMS](https://smseg.com/app/session/register?source=php-package)
 from your laravel application.
 
 
@@ -28,6 +28,8 @@ composer require intoegy/sms
 ```
 ## Configuration
 
+In the first you have to create account at [SMS Smart Egypt](https://smseg.com/app/session/register?source=php-package).
+
 The defaults are set in `config/sms.php`. Publish the config to copy the file to your own config:
 ```sh
 php artisan vendor:publish --tag="sms-config"
@@ -40,6 +42,28 @@ You have to add the package provider to your app providers list:
    Intoegy\SMS\SMSServcieProvider::class,
    // ...
 ]
+```
+
+And create the configuration file called `/config/sms.php` contains this content:
+```php
+<?php
+
+return [
+    
+    'username'      =>    env('SMS_USER','<username>'),
+    'password'      =>    env('SMS_PASS','<password>'),
+    'sender'        =>    env('SMS_SENDER','<your-approved-sender>),
+     
+    ];
+
+```
+For more security you can add this information in `.env` file:
+```sh
+#...
+SMS_USER    = 
+SMS_PASS    =
+SMS_SENDER  =
+#...
 ```
 
 ## Global usage
