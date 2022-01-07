@@ -13,6 +13,13 @@ class SMSServiceProvider extends ServiceProvider
     */
     public function register() {
         //
+        if ($this->app->runningInConsole()) {
+
+            $this->publishes([
+                __DIR__.'/config/config.php' => config_path('sms.php'),
+            ], 'config');
+
+        }
         $this->mergeConfigFrom(__DIR__.'/config/config.php','sms');
     }
 
@@ -23,13 +30,7 @@ class SMSServiceProvider extends ServiceProvider
     */
     public function boot() {
         //
-        if ($this->app->runningInConsole()) {
-
-            $this->publishes([
-                __DIR__.'/config/config.php' => config_path('sms.php'),
-            ], 'config');
-
-        }
+       
     }
 
     public static function send($to, $message) {
@@ -47,6 +48,14 @@ class SMSServiceProvider extends ServiceProvider
         $url=str_replace('{@mobiles}',$strMobiles,$url);
         $url=str_replace('{@message}',urlencode($message),$url);
 
+        return json_decode(@file_get_contents($url));
+  
+    }
+    public static function balance() {
+        $url="https://smssmartegypt.com/sms/api/getBalance?username={@username}&password={@password}";
+        $url=str_replace('{@username}',config('sms.username'),$url);
+        $url=str_replace('{@password}',config('sms.password'),$url);
+        
         return json_decode(@file_get_contents($url));
   
     }
